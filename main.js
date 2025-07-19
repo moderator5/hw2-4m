@@ -1,5 +1,5 @@
 document.getElementById('productForm').addEventListener('submit', function(event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
   const name = document.getElementById('name').value.trim();
   const description = document.getElementById('description').value.trim();
@@ -11,7 +11,7 @@ document.getElementById('productForm').addEventListener('submit', function(event
     price: price
   };
 
-  fetch('/submit-product', {
+  fetch('http://localhost:8000/products', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
